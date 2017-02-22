@@ -1,0 +1,43 @@
+
+import java.util.Random;
+public class Asm1{
+	Random random= new Random();
+	String[] firstName={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","BB","CC","DD","EE","FF","GG","HH","IH","JJ","KK","LL","MM","NN"};
+	String[] middleName={"Kim","An","Quynh","Hoai","The","Minh","Gia","Ngoc","Thi","Thanh","Bao","Van","Dinh","Nguyet","Ba","Thuy","Duc","Huu","Thanh","Hong","Mien","Lan","Hue","Cong","Hien","Phuong","Truong","Nghia","Son","Thu" };
+	String[] lastName={"Tran","Nguyen","Phan","Ngo","Ly","Luyen","Pham","Vu","Duong","Dang","Do","Bui","Phan","Ho","Hoang"};
+	
+	//Random FullName
+	
+	String mockFirstName(){
+		int r =random.nextInt(firstName.length);
+		return firstName[r];	
+	}
+	
+	String mockMiddleName(){
+		int r=random.nextInt(middleName.length);
+		return middleName[r];
+	}
+	
+	String mockLastName(){
+		int r=random.nextInt(lastName.length);
+		return lastName[r];
+	}
+	
+    String mockFullName(){
+    	return mockFirstName() + mockMiddleName() + mockLastName();
+    }
+    
+   //Random Student's ID
+    
+    String studentID;
+    String mockStudentID(){
+    	studentID="HV";	
+    	int r=random.nextInt(10);
+    	for(int i=0;i<10;i++){
+    		studentID+=r;
+    	}
+    	return studentID;
+    }
+    
+    
+}

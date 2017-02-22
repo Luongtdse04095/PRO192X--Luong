@@ -1,0 +1,74 @@
+
+import java.util.Random;
+public class Asm1{
+	Random random= new Random();
+	String[] firstName={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","BB","CC","DD","EE","FF","GG","HH","IH","JJ","KK","LL","MM","NN"};
+	String[] middleName={"Kim","An","Quynh","Hoai","The","Minh","Gia","Ngoc","Thi","Thanh","Bao","Van","Dinh","Nguyet","Ba","Thuy","Duc","Huu","Thanh","Hong","Mien","Lan","Hue","Cong","Hien","Phuong","Truong","Nghia","Son","Thu" };
+	String[] lastName={"Tran","Nguyen","Phan","Ngo","Ly","Luyen","Pham","Vu","Duong","Dang","Do","Bui","Phan","Ho","Hoang"};
+	//Random FullName
+	
+	String mockFirstName(){
+		int r =random.nextInt(firstName.length);
+		return firstName[r];	
+	}
+	
+	String mockMiddleName(){
+		int r=random.nextInt(middleName.length);
+		return middleName[r];
+	}
+	
+	String mockLastName(){
+		int r=random.nextInt(lastName.length);
+		return lastName[r];
+	}
+	
+	String mockFullName(){
+		return mockLastName() + " " + mockMiddleName()+" "+ mockFirstName();
+	}
+    
+   //Random Student's ID
+    
+    String studentID;
+    String mockStudentID(){
+    	studentID="HV";	
+    	int r=random.nextInt(10);
+    	for(int i=0;i<10;i++){
+    		studentID+=r;
+    	}
+    	return studentID;
+    }
+    
+    // Random birthday
+    
+    int mockMonth(){
+    	int r=random.nextInt(12);
+    	return r+1;
+    }
+    
+    int mockDay(){
+    	int r=0;
+    	if(mockMonth()==2){
+    		r =random.nextInt(28); 
+    	}
+    	if(mockMonth()==1|| mockMonth()==3|| mockMonth()==5|| mockMonth()==7|| mockMonth()==9|| mockMonth()==11){
+    		r=random.nextInt(31);
+    	}
+    	if(mockMonth()==4|| mockMonth()== 6|| mockMonth()==8|| mockMonth()==10|| mockMonth()==12){
+    		r=random.nextInt(30);
+    	}
+    	return r +1;
+    }
+    
+    
+    
+    //Display
+    void mockFullNames(){ 
+        for (int i = 0; i < 25; i++) {
+      
+          System.out.println(mockFullName() +" " + mockDay()+ "/"+ mockMonth()+"/"+"1991" );
+        }
+        
+       // return arrFullName;
+      }
+
+}

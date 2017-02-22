@@ -1,0 +1,16 @@
+
+import java.util.Random;
+public class Asm1Test {
+	Random random= new Random();
+	String[] firstName={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","BB","CC","DD","EE","FF","GG","HH","IH","JJ","KK","LL","MM","NN"
+	};
+	String[] middleName={"Kim","An","Quynh","Hoai","The","Minh","Gia","Ngoc","Thi","Thanh","Bao","Van","Dinh","Nguyet","Ba","Thuy","Duc","Huu","Thanh","Hong","Mien","Lan","Hue","Cong","Hien","Phuong","Truong","Nghia","Son","Thu" };
+	String[] lastName={"Tran","Nguyen","Phan","Ngo","Ly","Luyen","Pham","Vu","Duong","Dang","Do","Bui","Phan","Ho","Hoang"};
+	//Behavior
+	String mockFirstName(){
+		int r =random.next(firstName.length);
+		return firstName[r];
+		
+	}
+}
+
