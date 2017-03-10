@@ -1,0 +1,7 @@
+package domain;
+
+public interface IEmployee {
+	int getAllowance(); // phu cap
+
+	double calculateSalary();// luong
+}

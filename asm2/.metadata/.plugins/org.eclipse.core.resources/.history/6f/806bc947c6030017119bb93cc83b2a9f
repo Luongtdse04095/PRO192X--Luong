@@ -1,0 +1,9 @@
+package domain;
+
+public abstract class Employee {
+	 public String name;
+	  public int salaryRatio;
+	  
+	  abstract int getAllowance();
+	  abstract double calculateSalary();
+}

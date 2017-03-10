@@ -1,0 +1,55 @@
+package luong.asm3.view;
+import java.util.Scanner;
+import service.StaffManager;
+public class Menu {
+
+	void printMenu() {
+		System.out.println("1- Input data. ");
+		System.out.println("2- Search by name. ");
+		System.out.println("3- Sorting & print list. ");
+		System.out.println("4- Exit.");
+
+		System.out.print("Please, Select 1,2,3,4: ");
+	}
+
+	private void runApp() {
+		// 1 - create bee
+		StaffManager manager = new StaffManager();
+		int choice = 0;
+
+		do {
+			printMenu();
+			Scanner scanner = new Scanner(System.in);
+			choice = scanner.nextInt();
+			switch (choice) {
+			case 1:
+				manager.inputData();
+				break;
+
+			case 2:
+				System.out.print("Please,Enter Name: ");
+				String searchName = scanner.next();
+				manager.search(searchName);
+				manager.printSearch();
+				break;
+				
+			case 3:
+				manager.sort();
+				manager.printList();
+				break;
+				
+			case 4:
+				System.exit(0);
+				break;
+
+			default:
+				System.out.println(" Error! Please,selection again: /n");
+				break;
+			}
+		} while (choice != 4);
+	}
+
+	public static void main(String[] args) {
+		new Menu().runApp();
+	}
+}

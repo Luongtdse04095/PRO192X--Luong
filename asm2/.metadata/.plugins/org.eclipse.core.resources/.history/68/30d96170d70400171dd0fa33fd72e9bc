@@ -1,0 +1,75 @@
+package service;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import domain.Teacher;
+import domain.Employee;
+import domain.IEmployee;
+import domain.Officer;
+
+public class StaffManager {
+	Scanner scan = new Scanner(System.in);
+	// 1. Menu [1]: Enter staffs’ information
+	// 1.1 Input Teacher
+
+	Teacher inputTeacher() {
+		Teacher t = new Teacher();
+		System.out.print("Name: ");
+		t.setName(scan.next());
+
+		System.out.print("Ratio Salary: ");
+		t.setSalaryRadio(scan.nextInt());
+
+		System.out.print("Falcuty: ");
+		t.setFalcuty(scan.next());
+
+		System.out.print("Degree (0=Bacherlor, 1=Master, 2= Doctor: ");
+		t.setDegree(scan.nextInt());
+
+		System.out.print("Working time: ");
+		t.setTeachingTime(scan.nextInt());
+
+		return t;
+	}
+	
+	// 1.2 Input Officer
+	
+	Officer inputOfficer() {
+		
+		Officer o = new Officer();
+		System.out.print("Name: ");
+		o.setName(scan.next());
+
+		System.out.print("Ratio Salary: ");
+		o.setSalaryRadio(scan.nextInt());
+
+		System.out.print("Department: ");
+		o.setDepartment(scan.next());
+
+		System.out.print("Position (1=Department Head, 2=Voice head, 3= Staff: ");
+		o.setPosition(scan.nextInt());
+
+		System.out.print("Working days: ");
+		o.setWorkingDays(scan.nextInt());
+
+		return o;
+	}
+	
+	// 1.3 ArrayList input
+	ArrayList<Employee> listStaff(){
+		ArrayList<Employee> list = new ArrayList<>();
+		int choiceTypeStaff = scan.nextInt();
+		if( choiseTypeStaff == 1){
+			
+		}
+		return list;
+	}
+
+	// 2. Menu [2]: Search & print officers and professors
+	// 2.1 Search officers and professors
+	// 2.2 Print officers and professors
+
+	// 3. Menu [3]: Sort & Display list of officers and professors
+	// 3.1 Sort
+	// 3.2 Display
+}

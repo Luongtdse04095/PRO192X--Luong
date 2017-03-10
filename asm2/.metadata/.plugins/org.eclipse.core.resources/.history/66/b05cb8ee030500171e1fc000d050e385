@@ -1,0 +1,91 @@
+package service;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import domain.Teacher;
+import domain.Employee;
+import domain.IEmployee;
+import domain.Officer;
+
+public class StaffManager {
+	ArrayList<Employee> list = new ArrayList<>();
+	Scanner scan = new Scanner(System.in);
+	// 1. Menu [1]: Enter staffs’ information
+	// 1.1 Input Teacher
+
+	Teacher inputTeacher() {
+		Teacher t = new Teacher();
+		System.out.print("Name: ");
+		t.setName(scan.next());
+
+		System.out.print("Ratio Salary: ");
+		t.setSalaryRadio(scan.nextInt());
+
+		System.out.print("Falcuty: ");
+		t.setFalcuty(scan.next());
+
+		System.out.print("Degree (0=Bacherlor, 1=Master, 2= Doctor: ");
+		t.setDegree(scan.nextInt());
+
+		System.out.print("Working time: ");
+		t.setTeachingTime(scan.nextInt());
+
+		return t;
+	}
+
+	// 1.2 Input Officer
+
+	Officer inputOfficer() {
+
+		Officer o = new Officer();
+		System.out.print("Name: ");
+		o.setName(scan.next());
+
+		System.out.print("Ratio Salary: ");
+		o.setSalaryRadio(scan.nextInt());
+
+		System.out.print("Department: ");
+		o.setDepartment(scan.next());
+
+		System.out.print("Position (1=Department Head, 2=Voice head, 3= Staff: ");
+		o.setPosition(scan.nextInt());
+
+		System.out.print("Working days: ");
+		o.setWorkingDays(scan.nextInt());
+
+		return o;
+	}
+
+	// 1.3 ArrayList input
+	ArrayList<Employee> listStaff() {
+		Employee addStaff = null;
+		System.out.println("Please, selecte 1 for Teacher, 2 for Empolyee: ");
+		int choiceTypeStaff = scan.nextInt();
+		if (choiceTypeStaff == 1) {
+			addStaff = inputTeacher();
+		} else
+			addStaff = inputOfficer();
+
+		list.add(addStaff);
+		return list;
+	}
+
+	// 2. Menu [2]: Search & print officers and professors
+	
+	
+	public ArrayList<Employee> search(String inputName) {
+		ArrayList<Employee> searchList = new ArrayList<>();
+		for (Employee employeeName : list) {
+			if (employeeName.getName().equals(inputName) == true) {
+				searchList.add(employeeName);
+				System.out.println(employeeName.toString());
+			}
+		}
+
+		return searchList;
+	}
+	// 3. Menu [3]: Sort & Display list of officers and professors
+	// 3.1 Sort
+
+	// 3.2 Display
+}

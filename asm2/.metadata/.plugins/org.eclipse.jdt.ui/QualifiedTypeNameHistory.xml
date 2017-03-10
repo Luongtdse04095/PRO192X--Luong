@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="luong.asm2.bee.Bee"/>
+<fullyQualifiedTypeName name="luong.asm2.domain.Bee"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="luong.asm2.domain.Queen"/>
+<fullyQualifiedTypeName name="luong.asm2.domain.Worker"/>
+<fullyQualifiedTypeName name="luong.asm2.domain.Drone"/>
+<fullyQualifiedTypeName name="luong.asm2.service.BeeManager"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="util.NumberUtil"/>
+<fullyQualifiedTypeName name="service.StaffManager"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.StackOverflowError"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="domain.Teacher"/>
+<fullyQualifiedTypeName name="domain.Officer"/>
+<fullyQualifiedTypeName name="domain.IEmployee"/>
+<fullyQualifiedTypeName name="domain.Employee"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+</qualifiedTypeNameHistroy>
