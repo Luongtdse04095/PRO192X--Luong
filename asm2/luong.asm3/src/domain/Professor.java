@@ -1,0 +1,75 @@
+package domain;
+
+public class Professor extends Employee {
+	private int degree;
+	private String falcuty;
+	private int teachingTime;
+
+	// 0. Name => extends Employee
+	// 1. Degree: trinh do
+
+	public int getDegree() {
+		return degree;
+	}
+
+	public void setDegree(int degree) {
+		this.degree = degree;
+	}
+
+	public String isDegree() {
+		if (degree == 1) {
+			return "Engineer/ Bachelor";
+		}
+		if (degree == 2) {
+			return "Master";
+		}
+		return "Doctor";
+	}
+
+	// 2. Allowance: (Phu cap)
+	@Override
+	public int getAllowance() {
+		if (degree == 1) {
+			return 300;
+		}
+		if (degree == 2) {
+			return 500;
+		}
+		return 1000;
+	}
+	// 3. Falcuty: phong ban
+
+	public String getFalcuty() {
+		return falcuty;
+	}
+
+	public void setFalcuty(String falcuty) {
+		this.falcuty = falcuty;
+	}
+
+	// 4. Teaching Time:
+
+	public int getTeachingTime() {
+		return teachingTime;
+	}
+
+	public void setTeachingTime(int teachingTime) {
+		this.teachingTime = teachingTime;
+	}
+
+	// 5. Salary Radio: => Entends Emloyee
+	// 6. Salary:
+	@Override
+	public double calculateSalary() {
+		return getSalaryRadio() * 730 + getAllowance() + teachingTime * 45;
+	}
+
+	// 7. Display:
+	@Override
+	public String toString() {
+		return " Professor | " + "Name: " + getName() + " " + "|" + " " + "Falcuty: " + getFalcuty() + " " + "|"
+				+ " " + "Degree: " + isDegree() + " " + "|" + " " + "Allowance: " + getAllowance() + " " + "|" + " "
+				+ "Teaching Time: " + getTeachingTime() + " " + "|" + " " + "Salary Radio: " + getSalaryRadio() + " "
+				+ "|" + " " + "Salary: " + calculateSalary();
+	}
+}
